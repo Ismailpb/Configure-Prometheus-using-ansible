@@ -22,3 +22,5 @@ Jan 03 20:11:48 ip-172-31-13-40.ap-south-1.compute.internal prometheus[2310]: ts
 Jan 03 20:11:48 ip-172-31-13-40.ap-south-1.compute.internal prometheus[2310]: ts=2022-01-03T20:11:48.888Z caller=head.go:528 level=info ...ile"
 
 ---
+
+![image](https://github.com/Ismailpb/Configure-Prometheus-using-ansible/blob/55527652f72f6dc220f6292e86a916f71d3d2fee/Screenshot%20from%202022-01-04%2001-53-01.png)
