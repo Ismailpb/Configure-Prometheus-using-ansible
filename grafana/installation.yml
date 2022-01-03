@@ -1,0 +1,31 @@
+---
+- name: Add repo
+  yum_repository:
+    name: grafana
+    description: "New repo for grafana" 
+    baseurl: "https://packages.grafana.com/oss/rpm"
+    repo_gpgcheck: yes
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: "https://packages.grafana.com/gpg.key"
+    sslverify: yes
+    sslcacert: "/etc/pki/tls/certs/ca-bundle.crt"
+    state: present
+
+- name: "Install Grafana"
+  yum:
+    name: grafana
+    state: present
+
+- name: "start / enable service"
+  service:
+    name: grafana-server
+    state: restarted
+    enabled: true
+[root@ip-172-31-14-39 ~]# cat installation.yml
+---
+- name: "Configuring grafana"
+  hosts: amazon
+  become: true
+  tasks:
+    - include_tasks: tasks.yml
